@@ -1,0 +1,1412 @@
+Interaction dynamics in classroom group work 
+Tom´aˇs Lintner a,b,c,*, Tom´aˇs Divi´ak b,d, Barbora Nekardov´a a,e 
+a Department of Educational Sciences, Masaryk University, Arna Nov´aka 1/1, Brno 602 00, Czechia 
+b Institute SYRI, ˇZerotínovo n´am. 617/9, Brno 601 77, Czechia 
+c netanlab, Bratislava, Slovakia 
+d Mitchell Centre for Social Network Analysis and Department of Criminology, The University of Manchester, Manchester, UK 
+e Institute for Research and Development in Education, Charles University, Myslíkova 208/7, Prague 110 00, Czechia   
+A R T I C L E  I N F O   
+Keywords: 
+Group work 
+Literacy 
+Student talk 
+Classroom interaction 
+Bursty behavior 
+Dynamic social network analysis 
+DyNAM 
+A B S T R A C T   
+Group work in classrooms is employed by teachers across all levels of education. For group work to be effective, 
+all students should participate equally. Why some students engage in interaction and how group size and 
+composition influence interaction dynamics is a research gap. We employed dynamic actor-oriented models on a 
+sample of 145 Czech lower-secondary students in 62 small groups and pooled the results from the groups with a 
+meta-analytical procedure. We found bursty behavior resulting from endogenous structural mechanisms of 
+reciprocity, transitivity, cyclicity, and preferential attachment. Students gave preference to initiating interactions 
+with those they initiated interactions with before and off-task interaction contributed to the development of on- 
+task interaction. Students strongly preferred interactions with friends. Those students who talked a lot during 
+regular whole-classroom lessons and students with high levels of literacy tended to both initiate and receive more 
+interactions in group work, and students similar in these attributes preferred to interact with each other. Group 
+size did not affect preferential attachment tendencies in interaction, but smaller groups made the effect of 
+friendship ties on interactions stronger, and communication group norms shifted with changing group compo­
+sition. Our study shows the suitability of dynamic actor-oriented models for studying interaction in education 
+and small groups.   
+1. Introduction 
+Group work in classrooms is widespread and employed by teachers 
+across all education levels. Letting students cooperate, learn from each 
+other, and help each other to achieve a common educational goal is 
+recognized and sometimes even mandated by educators as a desirable 
+part of student-centered learning (Felder and Brent, 1996; Fung, 2022; 
+Webb, 2009). For group work to be successful, all students in the group 
+should actively participate. However, this is not an easy task. Partici­
+pation in group work is usually unequal and entails free-riding – some 
+students doing everything while others not contributing at all (Le et al., 
+2018; Slavin et al., 2003). Many student- and group-level factors have 
+been hypothesized to influence student participation during group work 
+(Webb, 2009). Yet, groups are usually arranged by the teacher without 
+any consideration for the group composition and the potential effect the 
+composition may have on group work (Gillies and Boyle, 2010). 
+Most research on what leads to active and equal student participation 
+during group work is either qualitative or descriptive. Previous research 
+has not considered some important unique characteristics of group work 
+stemming from the fact that group work is wholly based on interactions. 
+Most studies have operationalized interaction as the number of times 
+individual students spoke (see Webb, 1991). Simply counting the 
+number of times a student speaks and relating that number to student 
+characteristics does not capture the nature of interaction, as it ignores 
+their interpersonal structure. Analyses based on such observations may 
+lead to results lacking validity because they have omitted fundamental 
+properties of interactions, which are inherently dynamic, relational, and 
+actor-oriented. They are dynamic because interactions occur over time 
+and each interaction is dependent on a previous interaction; for 
+example, interactions typically occur in a turn-taking manner such as 
+student A addressing student B followed by student B responding to 
+student A. They are relational because interactions necessarily occur 
+between two or more students; each interaction can therefore be un­
+derstood as a tie between a sender and one or more receivers, and over 
+time the ties form a network of interactions that forms a structure of 
+opportunities for further interaction. Interactions are actor-oriented 
+* Corresponding author at: Department of Educational Sciences, Masaryk University, Arna Nov´aka 1/1, Brno 602 00, Czechia. 
+E-mail address: tomas.lintner@mail.muni.cz (T. Lintner).  
+Contents lists available at ScienceDirect 
+Social Networks 
+journal homepage: www.elsevier.com/locate/socnet 
+https://doi.org/10.1016/j.socnet.2024.05.002 
+Received 8 October 2023; Received in revised form 24 March 2024; Accepted 26 May 2024   
+Social Networks 79 (2024 ) 14–24 
+Available online 4 June 2024 
+0378-8733/© 2024 The Author (s ). Published by Elsevier B.V. This is an open access article under the CC BY license ( http ://creativecommons.org/licenses/by/4.0/ ). 
+because the individual actors – in our case the students – are agentic and 
+make their own choices regarding how they interact and with whom 
+(Stadtfeld and Block, 2017). 
+A stream of network models developed in recent years, including 
+stochastic actor-oriented models (Snijders, 2001), relational event 
+models (Butts, 2008), and, most recently, dynamic network actor models 
+(Stadtfeld and Block, 2017), aim to capture the dynamic, relational, and 
+actor-oriented nature of interaction. Dynamic network actor models 
+(DyNAMs) are specifically tailored to fine-grained time-stamped data, 
+such as observations of student interactions during group work, and they 
+make it possible to capture mechanisms driving student choices to 
+interact with other students within a network framework. Despite the 
+availability of network models allowing the study of student in­
+teractions, the research employing network analysis on classroom 
+interaction has thus far focused on whole-classroom communication 
+only (e.g., Mameli et al., 2015; Ryu and Lombardi, 2015; Wagner and 
+Gonz´alez-Howard, 2018). 
+In this study, we aim to provide a new viewpoint on mechanisms 
+driving interactions between students in classroom group work by using 
+fine-grained time-stamped data from videorecorded group works and 
+employing network-based quantitative modelling accounting for the 
+dynamic, relational, and actor-oriented nature of interaction. We 
+differentiate between on-task and off-task interaction allowing us to 
+capture the effect of off-task interaction on-task interaction. We ask two 
+questions: 1.) What influences interaction dynamics in classroom group 
+work? and 2.) How does group composition influence the interaction dy­
+namics in classroom group work? 
+2. Theory and hypotheses 
+2.1. Temporal aspects of interaction 
+The nature of group work depends on the individual interactions 
+between students, particularly the order and timing of these in­
+teractions. Neglecting the temporal dimension of interaction relates to 
+several implicit assumptions – for example, it assumes that interactions 
+between actors do not change over time; that interactions are randomly 
+distributed over time; and that there is no relationship between the in­
+dividual interaction events (Miritello, 2013). These assumptions are, 
+however, incorrect. Interactions in group work are not static; actors 
+change who they initiate and end interaction with over time, and ties are 
+therefore constantly formed and dissolved. Interactions are also not 
+randomly distributed over time – it was shown that bursty behavior – 
+long periods of activity separated by intense bursts of activity – is a 
+universal feature of human interaction (Karsai et al., 2012; Miritello, 
+2013; Navarro et al., 2017). Generally, bursty behavior can be described 
+as a tendency to more likely to initiate interaction if an interaction 
+occurred shortly before (Barabasi, 2005). Hence, we expect the 
+following: 
+• H1 – general burstiness: students tend to initiate on-task inter­
+action if another on-task interaction was initiated recently in the group. 
+Moreover, individual interactions are not independent of each other; 
+rather, the order and relative timing of interactions affect subsequent 
+interactions. It has been established that interactions have a memory 
+that leads to old and repeated interactions being more likely to occur 
+over time than newly established interactions (Miritello, 2013). Just as 
+we expect on-task interaction to stem from previous on-task in­
+teractions, we also expect off-task interaction between two students to 
+increase likelihood of on-task communication between them. It was 
+found that activities unrelated to the task function to support the 
+eventual task solution among students and promote the collaborative 
+dynamics (Langer-Osuna et al., 2020). Hence: 
+• H2a – repeated interaction: students tend to initiate on-task 
+interaction with those groupmates that they initiated on-task interac­
+tion with before. 
+• H2b – cumulative repeated interaction: students’ tendency to 
+initiate on-task interaction with a given groupmate increases with each 
+repeated initiated on-task interactions with that groupmate before. 
+• H2c – off-task to on-task interaction: students’ tendency to 
+initiate on-task interaction with a given groupmate increases with each 
+repeated initiated off-task interactions with that groupmate before. 
+2.2. Relational aspects of interaction 
+It is also crucial to consider the relational mechanisms in interaction. 
+Each interaction requires a sender and one or more receivers of the 
+message. Each interaction in group work then forms some fundamental 
+pattern – either a dyad when one actor addresses another, or an outgoing 
+star graph when one actor addresses the whole group (Lehmann, 2019). 
+We expect several endogenous relational mechanisms to influence 
+interaction in group work. 
+Preferential attachment was found to be a frequently occurring 
+phenomenon in all types of networks (Rivera et al., 2010). In the context 
+of interaction networks, preferential attachment denotes the tendency to 
+initiate interaction towards those who either initiated or received many 
+interactions before, or to receive interaction from those who either 
+initiated or received many interactions before. It has been argued that 
+this is the result of a tendency of actors looking for new connections to 
+use other actors’ degree as a proxy for their suitability – in the context of 
+group work, we might expect students to be more likely to interact with 
+groupmates who had already initiated or received many interactions, as 
+it shows that the student is open to communication. Hence: 
+• H3a – ego type indegree preferential attachment: students tend 
+to initiate on-task interaction if they received many on-task interactions 
+previously. 
+• H3b – ego type outdegree preferential attachment: students 
+tend to initiate on-task interaction if they initiated many on-task in­
+teractions previously. 
+• H3c – alter type indegree preferential attachment: students 
+tend to receive on-task interaction if they received many on-task in­
+teractions previously. 
+• H3d – alter type outdegree preferential attachment: students 
+tend to receive on-task interaction if they initiated many on-task in­
+teractions previously. 
+Reciprocity, transitive closure, and cyclic closure also comprise 
+universally occurring mechanisms in communication networks (Kossi­
+nets and Watts, 2006; Ten Bosch et al., 2005). In the context of inter­
+action networks, immediate reciprocity is often interpreted as 
+turn-taking behavior (Ten Bosch et al., 2005). Transitive closure is the 
+tendency to initiate interaction with those who have been interacted 
+with before by the receiver of one’s previous interaction (student A 
+addressing student C after student A addressed student B and student B 
+addressed student C) – when one student interacts with another, it can 
+lead to subsequent interactions among other students who were indi­
+rectly connected through the initial interaction. Finally, cyclic closure 
+denotes the tendency to initiate interaction with those who have inter­
+acted with the sender of one’s previous interaction (student C addressing 
+student A after student A addressed student B and student B addressed 
+student C). Cyclic closure can be seen as an indirect exchange or 
+generalized reciprocity; once established, it was found to be 
+self-reinforcing (Bearman, 1997). Hence, we expect: 
+• H4a – reciprocity: students tend to receive on-task interaction 
+from a student who was the receiver of their interaction before. 
+• H4b – transitive closure: students tend to form transitive patterns 
+of interaction. 
+• H4c – cyclic closure: students tend to form cyclic patterns of 
+interaction. 
+In addition to the endogenous relational mechanisms, interaction is 
+potentially influenced by the friendship ties between individual stu­
+dents. On the one hand, friendship may support collaboration and 
+learning among group members; on the other hand, it may also lead to 
+off-task activities (Chiriac and Granstr¨om, 2012; Myers, 2012). 
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+15 
+Although there is a lack of conclusive evidence of the impact of 
+friendships among group members on group work activity, we anticipate 
+that the presence of a friendship tie between two students will enhance 
+the likelihood of on-task interaction between them. This assumption is 
+based on the notion that the sense of another person’s likeability typi­
+cally increases one’s inclination to engage in conversation with them. 
+Hence, we expect: 
+• H5 – interaction preference from friendship ties: students tend 
+to prefer on-task interactions with groupmates they consider friends. 
+2.3. Attribute-related aspects of interaction 
+Drawing from expectation states theory, we assume student level of 
+vocality during regular lessons and student level of literacy to play roles 
+in group work interaction. We understand vocality as a usual tendency 
+of a student to speak during regular whole-classroom lessons. Expecta­
+tion states theory postulates that, when given a collective task to 
+accomplish, individuals bring pre-existing status characteristics into 
+group interactions, which influence the group’s power and prestige 
+structure. Some members will be more active than others, exercise more 
+influence than others, and be rewarded more often than others (Berger 
+and Conner, 1969; Correll and Ridgeway, 2003). Vocality and literacy 
+are arguably important characteristics influencing student expectations 
+and status in group work. Vocality and literacy directly impact a stu­
+dent’s ability to communicate and articulate ideas effectively, serving as 
+key indicators of competence, leading to higher status within the group 
+and greater influence over group dynamics. Furthermore, students 
+typically have preconceived notions about their peers’ vocality and lit­
+eracy levels well before group work commences, influencing their ex­
+pectations and the eventual status dynamics within the group. These 
+status characteristics inform members’ expectations for each other’s 
+performance and contribution to group tasks, affecting how opportu­
+nities to participate and lead are distributed among group members. 
+Expectation states theory presumes that student characteristics influ­
+ence both expectations of themselves – which is also supported by evi­
+dence showing that relative student ability within a group is the 
+predictor of their active behavior (Webb, 1991) – as well as expectations 
+from others. Hence, we expect: 
+• H6a – vocality promoting interaction activity:students with 
+higher levels of whole-classroom vocality tend to initiate more on-task 
+interactions. 
+• H6b – literacy promoting interaction activity: students with 
+higher levels of literacy tend to initiate more on-task interactions. 
+• H6c – vocality promoting interaction attractiveness: students 
+with higher levels of whole-classroom vocality tend to receive more on- 
+task interactions. 
+• H6b – literacy promoting interaction attractiveness: students 
+with higher levels of literacy tend to receive more on-task interactions. 
+Based on the theory of homophily (Byrne, 1971; Turner et al., 1987) 
+and previous research showing that students generally tend to prefer 
+interactions with similar friends (Block and Grund, 2014), it is plausible 
+to assume that students with comparable communication skills and lit­
+eracy will naturally pair, valuing clear mutual understanding without 
+the need for extended clarifications. Hence: 
+• H7a – vocality homophily: students tend to choose groupmates 
+with similar levels of vocality when initiating on-task interactions. 
+• H7b – literacy homophily: students tend to choose groupmates 
+with similar levels of literacy when initiating on-task interactions. 
+2.4. Group-level aspects of interaction 
+We expect group size to influence interaction equality among stu­
+dents. Groups of three have often been criticized by researchers who 
+suggest that these groups lead to a higher probability of one of the 
+students being excluded from active group participation, especially if 
+one of the students does not have good relations with the other two, 
+while the other two are friends (Cullingford, 1988). On the other hand, it 
+was found that smaller groups generally allow a more even participation 
+of all students (Kutnick et al., 2002; Kutnick and Blatchford, 2014). We 
+deem preferential attachment as a proxy for general tendencies for un­
+equal distribution of interactions, because it shows how unequal dis­
+tribution of interactions stems purely from previous interactions in that 
+group. Hence: 
+• H8a – group size influencing preferential attachment: smaller 
+group size decreases the effect of preferential attachment on interaction. 
+• H8b – group size influencing the effect of friendship ties: 
+smaller group size decreases the effect of preferential attachment on 
+interaction. 
+We also expect group vocality and literacy composition to shape the 
+dynamics of student interaction patterns within group work. Existing 
+research provides mixed insights on the role of ability composition in 
+group dynamics. For instance, Lou et al. (1996) found that homogeneity 
+in group ability could enhance outcomes, but this does not consistently 
+apply to groups with uniformly low abilities. Conversely, Webb (1991) 
+observed that in groups of high-ability students, communication was 
+often stifled due to a mistaken belief that all members knew how to solve 
+a given problem. These findings suggest that both the average ability of a 
+group and the diversity of abilities within the group may moderate the 
+importance of the individuals’ attributes. A higher average level of 
+vocality and literacy within a group suggests that members collectively 
+possess strong communication and comprehension skills, which could 
+lead to more balanced participation based on their vocality and literacy 
+as each member feels competent to contribute. On the other hand, 
+greater heterogeneity may introduce a wider range of perspectives and 
+problem-solving approaches, potentially enriching the group’s collabo­
+rative process. This diversity also means that the influence of any single 
+student’s specific level of vocality or literacy might be diluted, as the 
+group’s dynamic becomes less about individual contributions and more 
+about leveraging the collective skill set. Thus, we hypothesize that 
+groups with both higher averages and greater diversity in vocality and 
+literacy will exhibit more equitable interaction patterns, as the variance 
+in individual attributes is balanced by the group’s overall composition, 
+reducing the dominance of specific characteristics on group interaction. 
+Hence: 
+• H9a – group average vocality and heterogeneity influencing 
+the role of individual students’ vocality on interaction: higher 
+average group vocality level and heterogeneity decrease the effect of 
+individuals’ vocality on interaction. 
+• H9b – group average literacy and heterogeneity influencing 
+the role of individual students’ literacy on interaction: higher 
+average group literacy level and heterogeneity decrease the effect of 
+individuals’ literacy on interaction. 
+3. Data and methods 
+3.1. Research context 
+The data this research is based on were collected for a larger research 
+project called Collectivity in dialogic learning: An interventional study. The 
+main aim of the project was to determine whether an intervention led by 
+researchers among comprehensive lower-secondary class teachers could 
+enhance classroom communication. Half of the classrooms in the sample 
+underwent an intervention focused on classroom dialogue. Employing 
+collaborative group work was a part of the intervention, with each 
+interventional classroom experiencing two lessons containing group 
+work – our data came from these lessons. All group work took place 
+during Czech language lessons. The group work all had a similar struc­
+ture – groups were given a worksheet and everyone in the group was 
+instructed to collaborate with each other to complete the worksheet. 
+Each group work was supposed to take approximately ten minutes, 
+however, the groups greatly differed in how much time they spent 
+interacting – some were interacting for only over a minute, while others 
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+16 
+were interacting for almost thirty minutes. 
+3.2. Ethics 
+Oral consent from school principals and teachers and written consent 
+from the teachers and parents of participating students were obtained. 
+The students were able to withdraw from research at any time. All 
+procedures were performed in compliance with Masaryk University’s 
+institutional guidelines on ethics in research. 
+3.3. Data collection 
+We collected data during the 2021/2022 school year. We collected 
+data on interactions between students in groups during collaborative 
+group work, relational data on peer friendships, and student-level at­
+tributes of talk during regular whole-classroom lessons and reading lit­
+eracy levels. 
+For the data on interactions, two members of the research team 
+visited the lessons and videorecorded all group work with one or two 
+recording devices per group work making it possible to identify who was 
+speaking, at what time, and what the content of the communication was. 
+In each classroom, the group work took place twice during the 2021/ 
+2022 school year. We worked with a total of 806 minutes of recorded 
+material. 
+We acquired the relational data denoting friendship ties between the 
+students with a pen-and-paper sociometric questionnaire consisting of a 
+single nomination question (Del Vecchio, 2011; Poulin & Dishion, 2008) 
+worded as “Write the names of the classmates you are friends with. You 
+can write as many names as you want. The order of the names does not 
+make any difference.” A trained researcher administered the question­
+naire in group settings in the classrooms during school lessons and 
+provided the students with the necessary assistance. We collected rela­
+tional data at two timepoints – at the beginning and at the end of the 
+school year. For the purposes of this study, we used only the relational 
+data from the beginning of the school year as all group work took place 
+closer to the beginning of the school year and we assumed the in­
+teractions among students to be the result of their relationships and not 
+vice-versa. 
+We acquired the data on whole-classroom talk with video recordings 
+of the lessons. We recorded two consecutive Czech language lessons in 
+each classroom at the beginning and at the end of the 2021/2022 school 
+year, assessed the length of each student’s on-task communication in 
+seconds with the help of EduCoM – a specialized mobile application 
+designed for bulk collection of educational communication data in 
+classrooms (ˇSvaˇríˇcek and Chmelík, 2018), and averaged the students’ 
+talk in seconds across the two consecutive lessons. Again, for the pur­
+poses of this study, we used only the whole-classroom talk data from the 
+beginning of the school year. Finally, we acquired the data on student 
+literacy levels with a standardized computer-based reading literacy test 
+by SCIO (2023) that was administered at schools at the beginning and 
+end of the school year. The test contained 26 items covering five areas of 
+literacy – distinguishing between opinions and judgements, dis­
+tinguishing between subjective and objective statements, identifying 
+manipulative communication in mass-media, using text as a study 
+resource, and forming new text. Students could score anywhere from 
+−100–100 points – a student would get −100 points if they answered all 
+items incorrectly, 0 points if they did not answer any item, and 100 if 
+they answered all the items correctly. The version with the negative 
+scoring system was validated by SCIO and recommended for use as a 
+measure of literacy. As with the other measures from both the beginning 
+and end of the school year, for the purposes of this study, we used only 
+the reading literacy score from the beginning of the school year. 
+3.4. Participants 
+Our sample comprised 145 students in the sixth grade (age 12–13) in 
+six different classrooms mixed into 62 groups. Most of the students were 
+part of both group work sessions during the school year, however, 
+neither of the groups were the same in those two group work sessions. 
+We therefore treated the 62 groups as independent of each other. Our 
+sample was gender-balanced with 78 (53.1 %) girls and 72 (46.9 %) 
+boys. The average vocality level of the participants was 11.9 (SD = 14.6) 
+– in other words, the students spent on average 11.9 seconds talking 
+during whole-classroom lessons. The average literacy level of the par­
+ticipants was 43.5 (SD = 22.9). We had 12.4 % whole-classroom talk 
+data and 10.3 % literacy data missing. We had 14 (22.6 %) groups of 
+three, 41 (66.1 %) groups of four, and 7 (11.3 %) groups of five students. 
+The groups showed a large variance in the average vocality composition 
+(mean = 10.9, SD = 7.9) and the average literacy composition (mean =
+42.1, SD = 14.2). 
+3.5. Coding interactions 
+We transcribed the recorded classroom group work into a text. Using 
+both the text and the recordings, we coded the interactions into time- 
+ordered and time-stamped relational event data. The basic unit of our 
+analysis was a relational event denoting a directed tie from one student 
+to another – or to the whole group – embedded in time as described by 
+Butts (2008) and by Stadtfeld and Block (2017). Each relational event 
+contained a sender, a receiver, and a time in seconds from the beginning 
+of the group work when the interaction occurred. Since most of the 
+relational events were very brief (~1 sec), we did not separate the 
+beginning and the end of the relational event; instead, we only coded the 
+beginning of the event. We coded both on-task and off-task interaction. 
+On-task communication related to the task the group was working on – it 
+included substantive communication relating to solving the task, but 
+also communication around organizing students’ workload. Off-task 
+communication did not relate to the task the group was working on. 
+We did not distinguish between the different types of interaction – e.g., 
+questions, answers, comments. The full codebook used to create the 
+interactional data is available as Supplementary Material S1. The coding 
+was performed by two of the authors of this study with 10 % of the 
+material being double-coded. We calculated the interrater agreement 
+with a Krippendorff’s Alpha calculated in R (R Core Team, 2021) 
+package icr (Staudt and L’Ecuyer, 2020) yielding an agreement of 0.872 
+(SD = 0.018) for the senders and 0.871 (SD = 0.019) for the receivers 
+denoting high interrater agreement. In total, we worked with 5333 
+relational events – 4721 on-task and 610 off-task. Fig. 1 shows the 
+number of relational events by type by group. The groups showed a large 
+variance in the number of both on-task and off-task events (meantotal =
+86.0, SDtotal = 61.1, meanon-task = 76.2, SDon-task = 59.1, meanoff-task =
+9.8, SDoff-task = 9.7). 
+3.6. Handling missing data 
+We imputed the missing student covariates by a multiple imputation 
+method. We assumed the covariates to be missing at random and applied 
+multiple imputation by chained equations with a predictive mean 
+matching imputation technique (Little, 1988). We imputed the cova­
+riates under a fully conditional specification using the default settings of 
+R package mice (van Buuren and Groothuis-Oudshoorn, 2011). Since 
+multiple imputation requires each model to be calculated multiple times 
+and our models required a significant amount of time for the estimation 
+procedure, calculating many datasets for missing covariate imputation 
+was prohibitive. We therefore decided to rely on the lower side of the 
+recommended number of datasets for imputation (van Buuren, 2018) 
+and made five datasets. We calculated the estimates in each imputed 
+dataset separately and combined them using Rubin’s rules (Rubin, 
+1987). 
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+17 
+3.7. Analytical strategy 
+Network models are usually limited to estimation of parameters of a 
+single network. Two streams of approaches emerged when dealing with 
+multiple networks – a single-step multilevel approach and a two-step 
+meta-analytic approach. There is inconclusive evidence about the ac­
+curacy of one approach over another. However, it was argued that the 
+decision to choose between the two should be guided by theoretical 
+assumptions about data-generating process – if it is assumed that the 
+networks come from a single distribution, a single-step approach should 
+be used; on the other hand, if it is assumed that the networks come from 
+different contexts or clusters, a two-step approach should be used 
+(Tolochko and Boomgaarden, 2024). Furthermore, the approach is often 
+guided by practical aspects, such as the degree of implementation of the 
+approaches for different models. 
+Here, we decided on the two-step meta-analytic approach using 
+dynamic network actor models (DyNAMs; Stadtfeld and Block, 2017). 
+Considering the differences in the numbers of events between the group 
+work sessions and sampling from different classrooms and different 
+schools, we assumed the data to come from different distributions. Also, 
+at the time of our analysis, goldfish.latent package built for the single-step 
+multilevel DyNAMs (Uzaheta et al., 2023) was not in a stage of imple­
+mentation that would allow us to use it as necessary in our research. 
+3.7.1. Dynamic network actor models 
+The first step of our analysis consisted of fitting DyNAMs with the 
+same specifications to each individual group work session. DyNAMs aim 
+to capture the network nature of interaction by explicitly modeling 
+emerging network patterns over time as decisions made by the actors 
+about when and with whom they interact. The model aims to explain the 
+emergence of relational events. In our case, the dependent variable of 
+the model is the emergence of an on-task relational event in log odds 
+ratios conditioned on a predefined set of effects based on previous 
+events, network structure, relationships between students, and student 
+attributes. We did not model the emergence of off-task relational events 
+and we used them only as a trigger of the on-task events, because we did 
+not have enough off-task events in our data allowing meaningful off-task 
+interaction models. The DyNAMs consist of two submodels – rate and 
+choice. The rate submodel contains effects relating to the general 
+activity of students. The choice submodel contains effects relating to the 
+tendency of students to choose certain groupmates for interaction 
+(Stadtfeld and Block, 2017). 
+Since a nonnegligible number of the relational events contained ut­
+terances aimed at the whole group (Non-task = 523, 11.1 %on-task, Noff-task 
+= 77, 12.6 %off-task) and the DyNAMs are not currently built to allow the 
+combination of relational events directed at specific actors along with 
+the relational events directed at the whole group, we had to address the 
+problem of having events directed at the whole group. We did not want 
+to disregard them, as this would result in lower statistics for the activity 
+of many students frequently addressing the whole group. We therefore 
+decided to employ the following permutation method: if a student 
+addressed the whole group, we told the model to randomly select one of 
+the other students in the group as the receiver; we did this with all cases 
+of a student addressing the whole group within that group session; we 
+calculated the model with data containing the relational events 
+addressed at students individually with all cases of events addressed to 
+the whole group substituted; we performed the procedure 100 times; we 
+aggregated the results of the individual models by averaging the log 
+odds ratios and calculating root-mean-square error from the individual 
+models’ standard errors. Because of this procedure along with the mice 
+procedure, getting estimates from one model from a single group work 
+session took 30 minutes on average. We calculated DyNAMs in R 
+package goldfish (Hollway and Stadtfeld, 2022). 
+3.7.2. Model specification 
+We fitted two distinct DyNAM model specifications – a baseline 
+model fitted to all 62 groups and a full model fitted to 39 group. The two 
+specifications stem from the fact that the size or composition of some 
+groups prevented fitting the full model specification. For example, we 
+could not include triadic terms on groups of three. We also could not 
+include student attribute effects on groups containing students with very 
+similar levels of vocality or literacy. The subsample of 39 groups used for 
+the full model did not significantly differ from the other groups included 
+in the full sample in the number of events per group (p = 0.253), vocality 
+composition (p = 0.256), or literacy composition (p = 0.421). 
+Due to the small sizes of our groups, we had to decide on the rele­
+vance of the included effects as some effects were highly collinear. We 
+decided not to include any gender and socioeconomic status (SES) ef­
+fects. The average gender homophily index on friendship ties across the 
+sample classrooms was 0.5 and gender terms were thus highly collinear 
+with the friendship tie effect. Student SES, on the other hand, was 
+correlated with both vocality (r = 0.2) and literacy (r = 0.2) and in 
+combination with the small groups, including SES in the models along 
+with vocality and literacy resulted in model convergence issues. We gave 
+preference to the inclusion of vocality and literacy effects due to their 
+more direct and observable impact on group dynamics and task-related 
+interactions. 
+In 22 (35.5 %) groups, there was no off-task interaction and in 7 
+(11.3 %) groups, there were either friendship ties between all group 
+members or between none of them. Hence, in some groups, it was 
+principally impossible to include effects testing H2c – off-task to on- 
+task interaction and H5 – interaction preference from friendship 
+ties. We opted not to create separate model specifications for them. 
+Maintaining a unified model approach across groups, despite the lack of 
+off-task interaction and varying friendship ties in some, allowed us to 
+avoid fragmenting the data, which would reduce the overall clarity of 
+the analysis. We conducted sensitivity analyses to test if the effect esti­
+mates were significantly different for groups that included off-task in­
+teractions and friendship ties compared to those that did not. The 
+sensitivity analysis indicated no substantial effect of the incomplete 
+model specification on our interpretation of the results, thereby rein­
+forcing our decision to treat those groups uniformly within our analyt­
+ical framework. Results of the sensitivity analysis are available as 
+Supplementary Material S2. 
+As we worked with small networks which quickly became complete 
+Fig. 1. Number of relational events in the groups.  
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+18 
+graphs, we had to decide on time windows for some effects. We set a 
+default 20-second window for dyadic effects and a 40-second window 
+for triadic effects as double the window for the dyadic effects as they 
+require one event more. We based our decision on the observation of 
+distribution of reciprocated sequence times. We defined reciprocated 
+sequence time as the difference in times between two events, not 
+necessarily immediately subsequent, where the second one was a 
+reciprocation of the first one. We did not consider the strict AB-BA 
+participation shifts occurring as two immediately following events 
+described in Butts (2008), because our groups would sometimes split 
+into two separate simultaneous conversations in pairs. If we worked 
+with the strict definition of the participation shifts, we would have 
+missed some of the actual reciprocated events as in the time, as two 
+simultaneous conversations would be overlapping in time. Fig. 2 shows 
+the distribution of reciprocated sequence times. The distribution is 
+long-tailed with most reciprocated events occurring within that 20-sec­
+ond window. 
+The baseline model is the most comprehensive specification that 
+could be fitted to all 62 groups. Apart from intercept, the rate submodel 
+contains the following effects: 
+• egobursty behavior testing H1 – general burstiness tendency. It cap­
+tures the probability of initiating an on-task interaction with any 
+groupmate conditioned on an initiation of on-task event in the window 
+of the previous 20 seconds by any student in the group. bursty behavior 
+serves as a dynamic dummy variable, which is same for all students, but 
+which changes in time as a rolling window of 20 seconds. If any on-task 
+event is initiated, all students in that group are “triggered” for 
+20 seconds assuming that recent activity will trigger future activity and 
+it therefore aims to capture general burstiness tendency independent of 
+any specific connections or attributes. 
+• indegweighted and outdegweighted testing H3a and H3b – ego type in/ 
+outdegree preferential attachment. They capture the tendency to 
+initiate on-task interaction if previously receiving/initiating many on- 
+task interactions. We used weighted specifications for the in and out­
+degree terms as we wanted to capture the cumulative tendency of those 
+who initiate and receive many interactions to initiate more interaction 
+in future. 
+The choice submodel contains the following effects: 
+• inertia testing H2a – repeated interaction. It captures the ten­
+dency to choose a groupmate for on-task interaction if they initiated 
+interaction towards that groupmate before – in other words, the ten­
+dency to repeat existing ties rather than create new ones. 
+• tieon-task interaction weighted testing H2b – cumulative repeated 
+interaction. It captures the increased tendency to choose a groupmate 
+for on-task interaction with each repeated initiated on-task interactions 
+with that groupmate before. 
+• tieoff-task interaction weighted testing H2c – off-task to on-task interac­
+tion. It captures the increased tendency to choose a groupmate for on- 
+task interaction with each repeated initiated off-task interactions with 
+that groupmate before. It serves as a cross-network term controlling for 
+the effect of off-task interactions on-task interactions. 
+• indegweighted and outdegweighted testing H3c and H3d – alter type in/ 
+outdegree preferential attachment. They capture the tendency to 
+receive on-task interaction if previously receiving/initiating many on- 
+task interactions. As with the rate submodel terms, we used weighted 
+specifications aiming to capture the cumulative tendency of those who 
+initiate and receive many interactions to receive more interaction in 
+future. 
+• recipwindow20 testing H4a – reciprocity. It captures the tendency to 
+reciprocate on-task interactions within the window of 20 seconds of 
+receiving it. 
+• tiefriendship testing H5 – interaction preference from friendship 
+ties. It captures the tendency of students to choose those groupmates as 
+receivers of their on-task interaction whom they consider friends. 
+The full model tests all our hypotheses and could be fitted to 39 
+groups. It contains all effects included in the baseline model plus triadic 
+and attribute-based effects. The rate submodel contains the following 
+effects: 
+• egowhole-class. talk testing H6a – vocality promoting interaction 
+activity. It captures the tendency of students with higher levels of 
+vocality to initiate more on-task interactions. 
+• egoliteracy testing H6b – literacy promoting interaction activity. It 
+captures the tendency of students with higher levels of literacy to initiate 
+more on-task interactions. 
+The choice submodel contains the following effects: 
+• transwindow40 testing H4b – transitive closure. It captures the 
+tendency to interact in a way that forms the transitive pattern of an 
+event i→j closing more two-paths (i→k→j). 
+• cyclewindow40 testing H4c – cyclic closure. It captures the tendency 
+to interact in a way that forms the cyclic patterns of an event i→j closing 
+more two-paths (j→k→i). 
+• alterwhole-class. talk testing H6c – vocality promoting interaction 
+attractiveness. It captures the tendency of students with higher levels of 
+vocality to receive more on-task interactions. 
+• alterliteracy testing H6d – literacy promoting interaction attrac­
+tiveness. It captures the tendency of students with higher levels literacy 
+to receive more on-task interactions. 
+• sim
+whole-class talk testing H7a – vocality homophily. It captures 
+the tendency to choose groupmates with similar levels of vocality when 
+initiating on-task interactions. 
+• sim
+literacy testing H7b – literacy homophily. It captures the 
+tendency to choose groupmates with similar levels of literacy when 
+initiating on-task interactions. 
+3.7.3. Meta-analysis 
+The second step of our analysis consisted of aggregating the results 
+from the individual DyNAMs. Pooling the estimates across the groups 
+resulted in overall model estimates. We pooled the estimates with a 
+random-effect meta-analysis in R package metafor (Viechtbauer, 2010), 
+assuming that the observed estimates varied across the groups both 
+because of real differences in the effect sizes in each group and because 
+of the sampling variability. 
+3.7.4. Meta-regression 
+The third step of our analysis consisted of fitting meta-regression 
+models with group size and composition as moderator variables. Meta- 
+regression allows for the investigation of the relationships between 
+group-level variables and effect sizes across multiple models fitted to 
+Fig. 2. Distribution of reciprocated sequence times.  
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+19 
+individual groups. It seeks to understand the heterogeneity in effect sizes 
+by examining how they are influenced by external factors. To test H8a – 
+group size influencing equality of interaction and explore whether 
+smaller group size is related to weaker preferential attachment ten­
+dencies, we used group size as a moderator variable for the indeg and 
+outdeg effects. A negative coefficient for group size would indicate that 
+in smaller groups, interaction among students is less centralized around 
+a small number of students and the interaction is therefore more equal. 
+To test H8b – group size influencing the effect of friendship ties and 
+explore whether smaller group size increases the effect of friendship ties 
+on interaction, we used group size as a moderator variable for the tie­
+friendship effect. We used the baseline model to test the moderating role of 
+the group size as it could be fitted to all 62 groups. To test H9a – group 
+average vocality and heterogeneity influencing the role of indi­
+vidual students’ vocality on interaction, we used the mean, SD, and 
+the interaction between the two as moderator variables for the egowhole- 
+class. talk, alterwhole-class. talk, and sim
+whole-class. talk effects. To test H9b – 
+group average literacy and heterogeneity influencing the role of 
+individual students’ literacy on interaction, we used the mean, SD, 
+and the interaction between the two as moderator variables for the 
+egoliteracy, alterliteracy, and sim
+literacy effects. 
+4. Results 
+Fig. 3 shows the event timelines across the groups. Three striking 
+patterns are apparent. First, interaction in all groups exhibit burstiness – 
+the events are not evenly distributed in time, they occur in clusters of 
+high-activity periods split by low-activity periods with no interaction. 
+Second, on-task and off-task interactions do not mix – there are periods 
+of on-task interactions, periods of off-task interactions, but not periods 
+of combined on- and off-task interactions. Third, off-task interaction 
+periods often precede on-task interaction periods. Most group work 
+sessions start with a period of off-task interactions followed by one or 
+more periods of on-task interactions. 
+4.1. What influences interaction dynamics in classroom group work? 
+Table 1 shows the pooled DyNAM estimates with their associated 
+standard errors (SE) and p-values. Neither the baseline nor the full 
+model shows a significant egobursty behavior effect, thus providing no evi­
+dence for the general tendency of burstiness in a sense of having 
+increased activity due to occurrence of recent previous activity in the 
+group. The observed burstiness seen in Fig. 3 is therefore caused by other 
+mechanisms. Both models show positive and significant inertia and tieon- 
+task interaction weighted effects, suggesting that students tend to prefer 
+repeated on-task interactions with the same groupmates, and that ten­
+dency increases with each repeated initiated on-task interactions with 
+that groupmate before. Both models also show a positive and significant 
+tieoff-task interaction weighted effect – although borderline significant in the full 
+model – suggesting that off-task interaction leads to on-task interaction. 
+Except for the indegweighted effect in the choice submodel and outdegweighted 
+effect in the rate submodel in the full specification, the indeg and outdeg 
+effects are positive and significant, suggesting that those who initiate 
+and receive many on-task interactions are more likely to initiate future 
+on-task interactions, and those who initiate many on-task interactions 
+are more likely to receive future on-task interactions. This results in 
+interaction-wise active and/or popular students being engaged in in­
+teractions disproportionately more than others. The models further 
+show positive and significant recipwindow20, transwindow40, and cycle­
+window40 effects, suggesting that students tend to reciprocate on-task 
+interaction and form both transitive and cyclic patterns of on-task 
+interaction. Both models show a positive and significant tiefriendship ef­
+fect, suggesting that students prefer initiating on-task interactions with 
+groupmates they consider friends. In the full model, all ego and alter 
+effects are positive and significant, suggesting that students who are 
+vocal in whole-classroom lessons and students with higher levels of 
+literacy are more likely to initiate and receive on-task interaction in 
+group work. Both sim 
+effects are also positive and significant, sug­
+gesting that students tend to choose groupmates with similar levels of 
+vocality and literacy when initiating on-task interactions. 
+4.2. How does group composition influence interaction dynamics in 
+classroom group work? 
+Table 2 shows the results of the meta-regression models. The models 
+do not support the hypothesis that the size of the group would have any 
+effect on the preferential attachment in interaction, with group size not 
+being a significant moderator for any of the indeg and outdeg effects. The 
+models also do not support the hypothesis that the group average lit­
+eracy or heterogeneity would have any moderating effect on egoliteracy, 
+alterliteracy, or sim
+literacy effects. On the other hand, the models suggest 
+that larger group size is related to a lower tiefriendship effect. It supports 
+Fig. 3. Event timelines across the groups. Each tick denotes a single relational event in time.  
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+20 
+our hypothesis that in groups of three, the effect of friendships on 
+preference for initiating interactions is higher than in larger groups and 
+that a student without any friend is more likely to be excluded from 
+interaction in groups of three. The models further provide tentative 
+evidence that a higher average student vocality level in group is related 
+to a lower egowhole-class. talk effect, hence, lower tendency of vocal students 
+to be more active in initiating on-task interactions. The models also 
+provide tentative evidence that a higher heterogeneity of student 
+vocality in group is related to a lower sim
+whole-class. talk effect, hence, 
+lower tendency of students to choose groupmates with similar levels of 
+vocality when initiating on-task interactions. 
+5. Discussion and conclusion 
+In this study, we explored the interaction dynamics of lower- 
+secondary students in collaborative group work sessions. We 
+addressed the gap in the literature stemming from the fact that inter­
+action in group work has never been considered in its realistic nature: 
+dynamic, relational, and actor-oriented. We employed a recent addition 
+to the actor-based network model family – DyNAMs – suited for the 
+study of fine-grained time-stamped interactional data. 
+We found that interaction in group work is largely influenced by an 
+array of endogenous structural mechanisms. These include reciprocity, 
+transitivity, cyclicity, and preferential attachment. We also found 
+interaction in group work to be influenced by the interaction repetition, 
+Table 1 
+Pooled DyNAM estimates.   
+baseline model (62 groups) 
+full model (39 groups) 
+log 
+(OR) 
+SE 
+p 
+log 
+(OR) 
+SE 
+p 
+rate submodel       
+intercept 
+-2.245 
+0.371 
+<0.001 
+-1.309 
+0.550 
+0.017 
+egobursty behavior (H1 
+– general 
+burstiness 
+tendency) 
+0.106 
+0.079 
+0.177 
+0.134 
+0.091 
+0.138 
+indegweighted (H3a – 
+ego type indeg. 
+pref. attach.) 
+0.039 
+0.007 
+<0.001 
+0.068 
+0.013 
+<0.001 
+outdegweighted (H3b – 
+ego type outdeg. 
+pref. attach.) 
+0.029 
+0.004 
+<0.001 
+-0.005 
+0.013 
+0.732 
+egowhole-class. talk 
+(H6a – vocality 
+promoting 
+interact. activity)    
+0.020 
+0.006 
+<0.001 
+egoliteracy (H6b – 
+literacy promoting 
+interact. activity)    
+0.005 
+0.001 
+<0.001 
+choice submodel       
+inertia (H2a – 
+repeated interact.) 
+0.596 
+0.079 
+<0.001 
+0.502 
+0.031 
+<0.001 
+tieon-task interaction 
+weighted (H2b – 
+cumulative 
+repeated interact.) 
+0.079 
+0.015 
+<0.001 
+0.079 
+0.031 
+0.012 
+tieoff-task interaction 
+weighted (H2c – off- 
+task to on-task 
+interact.) 
+0.213 
+0.081 
+0.009 
+0.447 
+0.265 
+0.092 
+indegweighted (H3c – 
+alter type indeg. 
+pref. attach.) 
+0.031 
+0.030 
+0.301 
+-0.032 
+0.088 
+0.714 
+outdegweighted (H3d – 
+alter type outdeg. 
+pref. attach.) 
+0.118 
+0.015 
+<0.001 
+0.166 
+0.027 
+<0.001 
+recipwindow20 (H4a – 
+reciprocity) 
+1.038 
+0.104 
+<0.001 
+1.140 
+0.150 
+<0.001 
+trans window40 (H4b – 
+transitive closure)    
+0.342 
+0.110 
+0.002 
+cycle window40 (H4c – 
+cyclic closure)    
+0.616 
+0.074 
+<0.001 
+tiefriendship (H5 – 
+interact. 
+preference from 
+friendship ties) 
+0.448 
+0.068 
+<0.001 
+0.912 
+0.244 
+<0.001 
+alterwhole-class. talk 
+(H6c – vocality 
+promoting 
+interact. attract.)    
+0.068 
+0.011 
+<0.001 
+alterliteracy (H6d – 
+literacy promoting 
+interact. attract.)    
+0.018 
+0.008 
+0.021 
+simwhole-class talk (H7a 
+– vocality 
+homophily)    
+0.153 
+0.080 
+0.055 
+simiteracy (H7b – 
+literacy 
+homophily)    
+0.045 
+0.010 
+<0.001  
+Table 2 
+Meta-regression results.   
+log 
+(OR) 
+SE 
+p 
+rate indegweighted (H8a – group size and equality)    
+intercept 
+0.073 
+0.051 
+0.147 
+group size 
+-0.009 
+0.013 
+0.491 
+rate outdegweighted (H8a – group size and equality)    
+intercept 
+0.052 
+0.038 
+0.175 
+group size 
+-0.006 
+0.010 
+0.552 
+choice indegweighted (H8a – group size and 
+equality)    
+intercept 
+0.138 
+0.215 
+0.522 
+group size 
+-0.027 
+0.053 
+0.613 
+choice outdegweighted (H8a – group size and 
+equality)    
+intercept 
+0.236 
+0.104 
+0.023 
+group size 
+-0.030 
+0.026 
+0.254 
+choice tiefriendship (H8b – group size and effects of 
+friendships)    
+intercept 
+1.455 
+0.541 
+0.007 
+group size 
+-0.241 
+0.129 
+0.061 
+rate egowhole-class. talk (H9a – group av. vocality and 
+heterogeneity)    
+intercept 
+0.061 
+0.019 
+0.001 
+group average vocality 
+-0.002 
+0.001 
+0.098 
+vocality heterogeneity 
+-0.003 
+0.003 
+0.246 
+group average vocality*heterogeneity 
+0.000 
+0.000 
+0.245 
+choice alterwhole-class. talk (H9a – group av. vocality 
+and heterogeneity)    
+intercept 
+0.280 
+0.169 
+0.097 
+group average vocality 
+-0.010 
+0.008 
+0.214 
+vocality heterogeneity 
+-0.013 
+0.027 
+0.614 
+group average vocality*heterogeneity 
+0.001 
+0.001 
+0.666 
+choice simwhole-class. talk (H9a – group av. vocality 
+and heterogeneity)    
+intercept 
+0.545 
+0.300 
+0.070 
+group average vocality 
+-0.004 
+0.022 
+0.847 
+vocality heterogeneity 
+-0.081 
+0.047 
+0.087 
+group average vocality*heterogeneity 
+0.003 
+0.002 
+0.138 
+rate egoliteracy (H9b – group av. literacy and 
+heterogeneity)    
+intercept 
+0.030 
+0.030 
+0.310 
+group average literacy 
+-0.001 
+0.001 
+0.485 
+literacy heterogeneity 
+-0.001 
+0.002 
+0.744 
+group average literacy*heterogeneity 
+0.000 
+0.000 
+0.794 
+choice alterliteracy (H9b – group av. literacy and 
+heterogeneity)    
+intercept 
+-0.067 
+0.123 
+0.585 
+group average literacy 
+0.003 
+0.003 
+0.396 
+literacy heterogeneity 
+0.010 
+0.011 
+0.358 
+group average literacy*heterogeneity 
+-0.000 
+0.000 
+0.313 
+choice simliteracy (H9b – group av. literacy and 
+heterogeneity)    
+intercept 
+0.060 
+0.116 
+0.605 
+group average literacy 
+0.000 
+0.003 
+0.885 
+literacy heterogeneity 
+0.001 
+0.015 
+0.941 
+group average literacy*heterogeneity 
+-0.000 
+0.000 
+0.799  
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+21 
+with students giving preference to initiating interactions with those they 
+initiated interactions with before, including both on- and off-task in­
+teractions. Hence, off-task interaction also contributed to development 
+of on-task interaction. While we observed strong patterns of bursty 
+behavior in our data, modelling burstiness per se as a mechanism 
+influencing event formation yielded non-significant results. Hence, the 
+observed burstiness in the groups was probably caused by the windowed 
+reciprocity, transitivity, and cyclicity effects, as these stem from recent 
+previous interactions and lead to new interactions. We further found 
+interaction in group work to be largely influenced by friendship ties 
+between students, with students giving strong preference to initiating 
+interactions with those they consider friends. We found evidence that 
+those students who talk a lot during regular whole-classroom lessons 
+and students with high levels of literacy tend to both initiate and receive 
+more interactions in group work, and students similar in these attributes 
+prefer to interact with each other. Finally, we found tentative evidence 
+that the vocality composition of the groups moderated the effects of 
+unequal student interaction based on their level of vocality. We found 
+that higher average group vocality was related to lower tendency of 
+vocal students to be more active in initiating interactions and higher 
+group vocality heterogeneity was related to lower tendency of students 
+to choose groupmates with similar levels of vocality when initiating 
+interactions. 
+The strong presence of the structural endogenous mechanisms in 
+interaction mirrors our expectations and previous research of interper­
+sonal and communication ties (Kossinets and Watts, 2006; Le et al., 
+2018; Rivera et al., 2010; Slavin et al., 2003; Ten Bosch et al., 2005). Our 
+results suggest that while many aspects might influence interaction in 
+group work, the endogenous mechanisms influence it the most. The 
+presence of the temporal mechanisms in interaction including the 
+preference for repeated on-task interactions and the influence of off-task 
+interactions on-task interactions also mirror our expectations and pre­
+vious research on group dynamics (Miritello, 2013; Langer-Osuna et al., 
+2020). Taken together, our findings show that ignoring the relational 
+and dynamic nature of small group interaction in educational settings 
+leads to neglecting a substantial portion of the mechanisms driving 
+group interactions. 
+The strong preference of students to interact with friends makes the 
+inconclusive results found in previous literature more conclusive. Pre­
+vious research found that friends in group work frequently engage in off- 
+task activities (Chiriac and Granstr¨om, 2012; Myers, 2012). While this 
+might be true; we found friendships ties to enhance on-task communi­
+cation as well. The question is how our finding relates to the previously 
+described tendency of students to exclude students with whom they do 
+not have good relationships (Cullingford, 1988). We believe our findings 
+support this thesis. If there is a group of four students and three of those 
+students consider each other friends, our strong positive estimate of 
+friendship ties suggests that those three students will give strong pref­
+erence to interaction with each other, while the fourth student will 
+remain excluded. The results of our meta-regression model further 
+support the thesis that a student is most likely to be excluded from 
+interaction if they are without friends in groups of three. In a more equal 
+scenario – a group of four in which two of the students consider each 
+other friends, while the other two are not friends with anyone in the 
+group – the two students who are not friends with anyone are also more 
+likely to be excluded from interaction because they are less likely to 
+communicate with the two students who are friends as well as less likely 
+to communicate with each other. In a scenario with two pairs of friends, 
+students may end up interact mostly within the friendship pairs, with the 
+group virtually operating as two groups. 
+Our findings related to the effects of student attributes support 
+expectation states theory (Berger and Conner, 1969; Correll and 
+Ridgeway, 2003) suggesting that pre-existing status characteristics in­
+fluence group work dynamics. Furthermore, our findings suggest that 
+certain groups of students tend to be disadvantaged in group work by 
+actively engaging in communication less and these groups of students 
+are those who are already disadvantaged in education. Both silent 
+(Sedova et al., 2019) and low-literacy (Meneghetti et al., 2006) students 
+have worse academic performances than their vocal and high-literacy 
+counterparts. If we accept the proposition that those who actively 
+engage in group work most are those who benefit from group work most, 
+we may interpret our findings as indicating that group work acts as 
+another mechanism through which disadvantaged students in education 
+get more disadvantaged, while those who are already successful accu­
+mulate even more advantages. 
+Our findings related to the effect of group size and composition in 
+interaction dynamics generally do not support earlier findings. We 
+found little support for the thesis that smaller groups allow more even 
+participation of all students (Kutnick et al., 2002; Kutnick and Blatch­
+ford, 2014). However, it is important to note that we operationalized 
+even participation as low preferential attachment tendencies, which 
+differs from measures used in other studies. Our approach to even 
+participation emphasizes the effect of cumulative advantage of active 
+and popular students in time, rather than the raw distribution of con­
+tributions. Also, we modelled only the differences among groups of 
+three, four, and five students; we are therefore unable to capture any 
+effect of group size if group size becomes significant with a larger 
+number of students. 
+Our findings related to the effect of group vocality composition on 
+equality of interaction suggest that communication group norms may 
+shift with changing group compositions. When the average group level 
+of vocality is high, the effect of vocal students to initiate more in­
+teractions is less pronounced. At the same time, when the group com­
+prises students with a diverse range of vocality levels, the effect of 
+vocality homophily is less pronounced. This pattern may be attributed to 
+the diffusion of expectations across members when overall group 
+vocality is high, diluting the influence of any single vocal student. In 
+such settings, the collective confidence to speak up may encourage even 
+the typically less vocal students to participate more actively. Conversely, 
+in groups with a diverse range of vocality levels, students may be more 
+likely to modulate their participation to match their peers, which could 
+diminish the vocality-based homophily. 
+5.1. Limitations 
+Our study has limitations stemming from the sample characteristics 
+and from the study design. Our models are based on a non- 
+representative sample of students from the Czech Republic, which 
+makes generalizations of our findings difficult. Furthermore, because 
+our groups were small, often had students with collinear characteristics, 
+and because we applied the DyNAMs to the groups individually, we were 
+unable to fit the full model testing all our hypotheses to all groups. We 
+were also unable to model the effects of demographic student charac­
+teristics, as including them made model convergence impossible. 
+Finally, when dealing with interactions addressed to the whole group, 
+we had to rely on a workaround involving the permutation method, as 
+DyNAMs are not currently able to work with both dyadic and multicast 
+interactions. It may be argued that interactions aimed at the whole 
+group are qualitatively different than dyadic interactions, however, we 
+treated them as qualitatively same as incorporating multiplex network 
+structures into DyNAMs in currently not implemented and beyond the 
+scope of this paper. Having an extension to DyNAMs making it possible 
+to model both dyadic and multicast interactions would therefore be 
+beneficial for modeling of many real-world situations. 
+5.2. Implications 
+Our study has several implications for practice. The strong effect of 
+friendship ties on interaction in group work implies that when teachers 
+form groups, they should not mix friends with non-friends together in 
+the same group as those who are not friends with others in the group are 
+at the risk of being excluded from the interaction. We therefore 
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+22 
+recommend forming either groups comprising only friends or groups 
+comprising only non-friends. Moreover, the moderating role of group 
+vocality composition on equal interaction implies that it may be more 
+beneficial to form groups so that they contain a diverse range of vocality 
+levels. 
+Our study has several implications for future research. We show that 
+DyNAMs are a very useful tool for the study of real-world interaction 
+between students. We show that DyNAMs are suitable to be fitted to 
+groups ranging from three to five actors. In combination with the 
+established meta-analytical procedures from social network models, we 
+show that DyNAMs can be used to get effect estimates from several 
+groups independently, with the results pooled to get overall estimates. 
+We therefore believe that DyNAMs have the potential to serve as a strong 
+analytical tool for the study of interaction in group work and for the 
+study of interaction in whole-classroom settings. Given that structural 
+endogenous mechanisms seem to influence interaction in group work 
+more than any relational or attribute effects, any research aiming to 
+explore interaction in group work should account for them, as the results 
+may otherwise be invalid. Finally, because the size and composition of 
+the groups prevented us from fitting the full model specification to all 
+groups, in the future, it might be useful to get estimates from multiple 
+groups using a multi-level framework with random-effects parameters 
+(Uzaheta et al., 2023), and to compare the estimates from the 
+meta-analytical framework with the estimates from the multi-level 
+framework. 
+CRediT authorship contribution statement 
+Tom´aˇs Lintner: Conceptualization, Formal analysis, Funding 
+acquisition, Investigation, Methodology, Visualization, Writing – orig­
+inal draft, Writing – review & editing. Barbora Nekardov´a: Investiga­
+tion, Writing – review & editing. Tomas Divi´ak: Formal analysis, 
+Investigation, Methodology, Writing – review & editing. 
+Declaration of Competing Interest 
+The authors declared no competing interests. 
+Data availability 
+The data that the paper is based on are publicly available in Men­
+deley Data here: https://doi.org/10.17632/9c3dth6cwp.3 and a Data in 
+Brief article describing the data has been published here: https://doi. 
+org/10.1016/j.dib.2023.109641. 
+Acknowledgements 
+This work was supported by GA21-16021S research grant of the 
+Czech Science Foundation. This work was also supported by the NPO 
+‘Systemic Risk Institute’ number LX22NPO5101, funded by European 
+Union—Next Generation EU (Ministry of Education, Youth and Sports, 
+NPO: EXCELES). 
+Appendix A. Supporting information 
+Supplementary data associated with this article can be found in the 
+online version at doi:10.1016/j.socnet.2024.05.002. 
+References 
+Barabasi, A.L., 2005. The origin of bursts and heavy tails in human dynamics. Nature 435 
+(7039), 207–211. https://doi.org/10.1038/nature03459. 
+Bearman, P., 1997. Generalized exchange. Am. J. Sociol. 102 (5), 1383–1415. https:// 
+doi.org/10.1086/231087. 
+Berger, J., Conner, T.L., 1969. Performance expectations and behavior in small groups. 
+Acta Sociol. 12 (4), 186–198. https://doi.org/10.1177/000169936901200403. 
+Block, P., Grund, T., 2014. Multidimensional homophily in friendship networks. Netw. 
+Sci. 2 (2), 189–212. https://doi.org/10.1017/nws.2014.17. 
+Butts, C.T., 2008. A relational event framework for social action. Sociol. Methodol. 38 
+(1), 155–200. https://doi.org/10.1111/j.1467-9531.2008.00203.x. 
+van Buuren, S., 2018. Flexible Imputation of Missing Data, 2nd Ed. CRC Press. 
+van Buuren, S., Groothuis-Oudshoorn, K., 2011. mice: multivariate imputation by 
+chained equations in R. J. Stat. Softw. 45, 1–67. https://doi.org/10.18637/jss.v045. 
+i03. 
+Byrne, D.E., 1971. The Attraction Paradigm. Academic Press, New York.  
+Chiriac, E.H., Granstr¨om, K., 2012. Teachers’ leadership and students’ experience of 
+group work. Teach. Teach. 18 (3), 345–363. https://doi.org/10.1080/ 
+13540602.2012.629842. 
+Correll, S.J., Ridgeway, C.L., 2003. Expectation states theory. In Handbook of social 
+psychology. Springer, Boston, MA, pp. 29–51. 
+Cullingford, C., 1988. Children’s views about working together. Education 3-13 16 (1), 
+29–34. https://doi.org/10.1080/03004278885200071. 
+Felder, R.M., Brent, R., 1996. Navigating the bumpy road to student-centered instruction. 
+Coll. Teach. 44 (2), 43–47. https://doi.org/10.1080/87567555.1996.9933425. 
+Fung, D., 2022. Achieving individual and collaborative success: an investigation of 
+guided group work and teacher participation in junior secondary science classrooms. 
+Int. J. Educ. Res. 111, 101908 https://doi.org/10.1016/j.ijer.2021.101908. 
+Gillies, R.M., Boyle, M., 2010. Teachers’ reflections on cooperative learning: issues of 
+implementation. Teach. Teach. Educ. 26 (4), 933–940. https://doi.org/10.1016/j. 
+tate.2009.10.034. 
+Hollway, J., Stadtfeld, C., 2022. goldfish: statistical network models for dynamic network 
+data. R. Package Version 1. 6. 4. 〈www.social-networks.ethz.ch/research/goldfish. 
+html〉. 
+Karsai, M., Kaski, K., Barab´asi, A.L., Kert´esz, J., 2012. Universal features of correlated 
+bursty behaviour. Sci. Rep. 2 (1), 397. https://doi.org/10.1038/srep00397. 
+Kossinets, G., Watts, D.J., 2006. Empirical analysis of an evolving social network. Science 
+311 (5757), 88–90. https://doi.org/10.1126/science.1116869. 
+Kutnick, P., Blatchford, P., 2014. Effective Group Work in Primary School Classrooms. 
+Springer, Dordrecht. https://doi.org/10.1007/978-94-007-6991-5.  
+Kutnick, P., Blatchford, P., Baines, E., 2002. Pupil groupings in primary school 
+classrooms: sites for learning and social pedagogy? Br. Educ. Res. J. 28 (2), 187–206. 
+https://doi.org/10.1080/01411920120122149. 
+Langer-Osuna, J.M., Gargroetzi, E., Munson, J., Chavez, R., 2020. Exploring the role of 
+off-task activity on students’ collaborative dynamics. J. Educ. Psychol. 112 (3), 
+514–532. https://doi.org/10.1037/edu0000464. 
+Le, H., Janssen, J., Wubbels, T., 2018. Collaborative learning practices: teacher and 
+student perceived obstacles to effective student collaboration. Camb. J. Educ. 48 (1), 
+103–122. https://doi.org/10.1080/0305764X.2016.1259389. 
+Lehmann, S., 2019. Fundamental structures in temporal communication networks. In: 
+Holme, P., Saram¨aki, J. (Eds.), Computational Social Sciences, Temporal Network 
+Theory. Springer, Cham. https://doi.org/10.1007/978-3-030-23495-9_2.  
+Little, R.J., 1988. Missing-data adjustments in large surveys. J. Bus. Econ. Stat. 6 (3), 
+287–296. https://doi.org/10.2307/1391878. 
+Lou, Y., Abrami, P.C., Spence, J.C., Poulsen, C., Chambers, B., d’Apollonia, S., 1996. 
+Within-class grouping: a meta-analysis. Rev. Educ. Res. 66 (4), 423–458. https://doi. 
+org/10.3102/00346543066004423. 
+Mameli, C., Mazzoni, E., Molinari, L., 2015. Patterns of discursive interactions in primary 
+classrooms: an application of social network analysis. Res. Pap. Educ. 30 (5), 
+546–566. https://doi.org/10.1080/02671522.2015.1027727. 
+Meneghetti, C., Carretti, B., De Beni, R., 2006. Components of reading comprehension 
+and scholastic achievement. Learn. Individ. Differ. 16 (4), 291–301. https://doi.org/ 
+10.1016/j.lindif.2006.11.001. 
+Miritello, G., 2013. Temporal Patterns of Communication in Social Networks. Springer. 
+https://doi.org/10.1007/978-3-319-00110-4. 
+Myers, S.A., 2012. Students’ perceptions of classroom group work as a function of group 
+member selection. Commun. Teach. 26 (1), 50–64. https://doi.org/10.1080/ 
+17404622.2011.625368. 
+Navarro, H., Miritello, G., Canales, A., Moro, E., 2017. Temporal patterns behind the 
+strength of persistent ties. EPJ Data Sci. 6 (31), 1–19. https://doi.org/10.1140/ 
+epjds/s13688-017-0127-3. 
+R Core Team, 2021. R: A Language and Environment for Statistical Computing. R 
+Foundation for Statistical Computing, Vienna, Austria. 〈https://www.R-project. 
+org/〉.  
+Rivera, M.T., Soderstrom, S.B., Uzzi, B., 2010. Dynamics of dyads in social networks: 
+assortative, relational, and proximity mechanisms. Annu. Rev. Sociol. 36, 91–115. 
+https://doi.org/10.1146/annurev.soc.34.040507.134743. 
+Rubin, D.B., 1987. Multiple Imputation for Nonresponse in Surveys. John Wiley and 
+Sons, New York.  
+Ryu, S., Lombardi, D., 2015. Coding classroom interactions for collective and individual 
+engagement. Educ. Psychol. 50 (1), 70–83. https://doi.org/10.1080/ 
+00461520.2014.1001891. 
+SCIO, 2023. Proj. Sch. 〈https://www.scio.cz/english/project-schools12.asp〉. 
+Sedova, K., Sedlacek, M., Svaricek, R., Majcik, M., Navratilova, J., Drexlerova, A., 
+Salamounova, Z., 2019. Do those who talk more learn more? The relationship 
+between student classroom talk and student achievement. Learn. Instr. 63, 101217 
+https://doi.org/10.1016/j.learninstruc.2019.101217. 
+Slavin, R., Hurley, E.A., Chamberlain, A., 2003. Cooperative learning and achievement: 
+theory and research. In: Reynolds, W.M., Miller, G.E. (Eds.), In Handbook of 
+psychology: Educational psychology, Vol.7. Wiley, New York, pp. 177–198. 
+Snijders, T.A., 2001. The statistical evaluation of social network dynamics. Sociol. 
+Methodol. 31 (1), 361–395. https://doi.org/10.1111/0081-1750.00099. 
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+23 
+Stadtfeld, C., Block, P., 2017. Interactions, actors, and time: dynamic network actor 
+models for relational events. Sociol. Sci. 4, 318–352. https://doi.org/10.15195/v4. 
+a14. 
+Staudt, A., L’Ecuyer, P., 2020. icr: Compute Krippendorff’s Alpha. R. Package Version 
+0 6, 2. 〈https://github.com/staudtlex/icr〉. 
+ˇSvaˇríˇcek, R., Chmelík, J., 2018. EduCoM (2.2) [Mobile application software]. Masaryk 
+University. 
+Ten Bosch, L., Oostdijk, N., Boves, L., 2005. On temporal aspects of turn taking in 
+conversational dialogues. Speech Commun. 47 (1-2), 80–86. https://doi.org/ 
+10.1016/j.specom.2005.05.009. 
+Tolochko, P., Boomgaarden, H.G., 2024. Same but different: a comparison of estimation 
+approaches for exponential random graph models for multiple networks. Soc. Netw. 
+76, 1–11. https://doi.org/10.1016/j.socnet.2023.05.003. 
+Turner, J.C., Hogg, M.A., Oakes, P.J., Reicher, S.D., Wetherell, M.S., 1987. Rediscovering 
+the Social Group: A Self-categorization theory. Blackwell. 
+Uzaheta, A., Amati, V., Stadtfeld, C., 2023. Random effects in dynamic network actor 
+models. Netw. Sci. 1–18. https://doi.org/10.1017/nws.2022.37. 
+Viechtbauer, W., 2010. Conducting meta-analyses in R with the metafor package. J. Stat. 
+Softw. 36 (3), 1–48. https://doi.org/10.18637/jss.v036.i03. 
+Wagner, C.J., Gonz´alez-Howard, M., 2018. Studying discourse as social interaction: the 
+potential of social network analysis for discourse studies. Educ. Res. 47 (6), 375–383. 
+https://doi.org/10.3102/0013189×18777741. 
+Webb, N.M., 1991. Task-related verbal interaction and mathematics learning in small 
+groups. J. Res. Math. Educ. 22 (5), 366–389. https://doi.org/10.5951/ 
+jresematheduc.22.5.0366. 
+Webb, N.M., 2009. The teacher’s role in promoting collaborative dialogue in the 
+classroom. Br. J. Educ. Psychol. 79 (1), 1–28. https://doi.org/10.1348/ 
+000709908×380772. 
+T. Lintner et al.                                                                                                                                                                                                                                  
+Social Networks 79 (2024 ) 14–24 
+24 
